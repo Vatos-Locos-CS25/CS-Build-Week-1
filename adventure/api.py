@@ -95,10 +95,8 @@ def rooms(request):
         'east': room.e_to != 0,
         'west': room.w_to != 0,
         'title': room.title,
-        'next_room_id_e': room.e_to,
-        'next_room_id_w': room.w_to,
-        'next_room_id_s': room.s_to,
-        'next_room_id_n': room.n_to,
+        'y_coor': room.y,
+        'x_coor': room.x,
         'description': room.description,
         'players': room.playerNames(player_id)
     } for  room in rooms], safe=False)
