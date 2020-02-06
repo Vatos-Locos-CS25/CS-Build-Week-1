@@ -190,7 +190,7 @@ class World:
                                                                  self.height,
                                                                  branch_from)
             if branch_from:
-                current_room = branch_from.pop(0)
+                current_room = branch_from.pop(random.randrange(len(branch_from)))  # noqa
                 current_location = [current_room.x, current_room.y]
             else:
                 break
